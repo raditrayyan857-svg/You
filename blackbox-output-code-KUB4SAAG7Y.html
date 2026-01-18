@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreams & Affirmations</title>
+    <style>
+        /* Pastel-themed, calm CSS for a gentle, feminine vibe */
+        body {
+            font-family: 'Georgia', serif; /* Elegant, soft font */
+            background: linear-gradient(to bottom, #f8e8ff, #e8f8ff); /* Lavender to mint gradient */
+            color: #5a5a5a; /* Soft gray text */
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            min-height: 100vh;
+        }
+        h1 {
+            color: #8a6b9e; /* Muted lavender */
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5); /* Subtle glow */
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9); /* Soft white overlay */
+            border-radius: 20px; /* Rounded for femininity */
+            padding: 30px;
+            max-width: 700px;
+            margin: 0 auto;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Gentle shadow */
+        }
+        .quote {
+            font-size: 1.8em;
+            color: #d4a5d4; /* Blush pink */
+            margin: 20px 0;
+            line-height: 1.6;
+            font-style: italic;
+        }
+        .subtext {
+            font-size: 1.2em;
+            color: #7a9e7a; /* Soft mint green */
+            margin-top: 15px;
+        }
+        button {
+            background: #e6d4f0; /* Light lavender */
+            color: #5a5a5a;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 15px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: #d4f0e6; /* Light mint on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Dreams Await</h1>
+    <div class="container">
+        <div id="quote-display" class="quote"></div>
+        <div class="subtext">Remember, your dreams are a gentle whisper of your true self. Embrace them softly.</div>
+        <button onclick="newQuote()">Inspire Me Again</button>
+    </div>
+    <script>
+        // Array of supportive, motivational affirmations
+        const affirmations = [
+            "You are worthy of every dream that lights up your heart. Take one small step today.",
+            "Your strength blooms quietly within you. Trust in your journey, even on indifferent days.",
+            "Dreams are like soft petals—nurture them gently, and they will unfold in their own time.",
+            "You hold the power to shape your world. Believe in yourself, one calm breath at a time.",
+            "Indifference fades when you remember your spark. Your dreams are valid and beautiful.",
+            "Embrace your inner peace; it is the foundation of all your aspirations.",
+            "You are enough, just as you are. Let your dreams guide you with kindness.",
+            "Every moment is a chance to reconnect with what sets your soul alight.",
+            "Your path is uniquely yours—walk it with grace and self-compassion.",
+            "Dreams thrive in quiet confidence. You have everything you need within."
+        ];
+
+        // Function to display a random affirmation
+        function newQuote() {
+            const randomIndex = Math.floor(Math.random() * affirmations.length);
+            document.getElementById('quote-display').textContent = affirmations[randomIndex];
+        }
+
+        // Load a quote on page load
+        window.onload = newQuote;
+    </script>
+</body>
+</html>
